@@ -2,10 +2,12 @@
 
 This repository contains the sample web application participants will test and a separate workspace for their QA agents. The target is a fictional banking dashboard with synthetic data only; it does not connect to real banks, payment networks, or financial accounts.
 
+Before you start the hackathon challenge, please make sure to fork the repository.
+
 ## Repository layout
 
 ```text
-participant-repo/
+Agentic-AQ-Hackathon
 ├── README.md
 ├── test-website/
 │   ├── PRD.md
