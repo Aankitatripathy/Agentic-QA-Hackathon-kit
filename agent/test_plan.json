@@ -1,0 +1,375 @@
+{
+  "tests": [
+    {
+      "test_id": "TC-001",
+      "requirement_id": "REQ-001",
+      "category": "positive",
+      "title": "One seeded demo customer is available",
+      "expected": "The target has one seeded demo customer.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-002",
+      "requirement_id": "REQ-002",
+      "category": "positive",
+      "title": "Enter Demo opens dashboard without login",
+      "expected": "The landing page provides a clearly labeled **Enter Demo** action. It opens the demo dashboard without requiring a password or real identity information.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-003",
+      "requirement_id": "REQ-003",
+      "category": "positive",
+      "title": "Header shows customer name and logout action",
+      "expected": "The header identifies the active demo customer and provides a **Log out** action.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-004",
+      "requirement_id": "REQ-004",
+      "category": "positive",
+      "title": "Logout returns to landing page",
+      "expected": "Logging out returns the user to the landing page. Protected dashboard views should not remain usable after logout; direct navigation to them should return the user to the landing page or an access-required state.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-005",
+      "requirement_id": "REQ-004",
+      "category": "negative",
+      "title": "Protected page cannot be accessed after logout",
+      "expected": "Logging out returns the user to the landing page. Protected dashboard views should not remain usable after logout; direct navigation to them should return the user to the landing page or an access-required state.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-006",
+      "requirement_id": "REQ-005",
+      "category": "edge",
+      "title": "Refresh preserves an active demo session",
+      "expected": "Refreshing while in a valid demo session should preserve that session. A logged-out user must not regain access merely by refreshing a protected page.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-007",
+      "requirement_id": "REQ-005",
+      "category": "negative",
+      "title": "Refresh does not restore a logged-out session",
+      "expected": "Refreshing while in a valid demo session should preserve that session. A logged-out user must not regain access merely by refreshing a protected page.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-008",
+      "requirement_id": "REQ-006",
+      "category": "positive",
+      "title": "Dashboard displays checking and savings accounts",
+      "expected": "The dashboard shows the customer's checking and savings accounts.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-009",
+      "requirement_id": "REQ-007",
+      "category": "positive",
+      "title": "Accounts show name, type, masked ID and USD balance",
+      "expected": "Each account displays a readable account name, a masked account identifier, account type, and current available balance in USD.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-010",
+      "requirement_id": "REQ-008",
+      "category": "positive",
+      "title": "Balances display two decimal places",
+      "expected": "Balances are displayed to two decimal places. The UI must not expose a full account identifier.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-011",
+      "requirement_id": "REQ-008",
+      "category": "negative",
+      "title": "Full account numbers are not exposed",
+      "expected": "Balances are displayed to two decimal places. The UI must not expose a full account identifier.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-012",
+      "requirement_id": "REQ-009",
+      "category": "positive",
+      "title": "Account detail displays balance and related history",
+      "expected": "Selecting an account opens an account detail view with its current balance and related transaction history.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-013",
+      "requirement_id": "REQ-010",
+      "category": "positive",
+      "title": "Dashboard and detail balances remain consistent",
+      "expected": "Account balances shown on the dashboard and detail view must agree with the latest successful transactions.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-014",
+      "requirement_id": "REQ-011",
+      "category": "positive",
+      "title": "Transfer between owned accounts succeeds",
+      "expected": "The user can transfer funds between the checking and savings accounts owned by the demo customer.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-015",
+      "requirement_id": "REQ-012",
+      "category": "positive",
+      "title": "Transfer form contains required fields and optional memo",
+      "expected": "The transfer form includes source account, destination account, amount, and an optional memo.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-016",
+      "requirement_id": "REQ-013",
+      "category": "negative",
+      "title": "Same-account transfer is rejected without side effects",
+      "expected": "The source and destination must be different accounts. Same-account transfers must be rejected with a clear explanation and must not alter balances or create a transaction.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-017",
+      "requirement_id": "REQ-014",
+      "category": "negative",
+      "title": "Blank transfer amount is rejected",
+      "expected": "Amount must be a positive number greater than zero, with no more than two digits after the decimal point. Blank, zero, negative, non-numeric, and over-precision values must be rejected with a clear validation message. Rejected input must not create a transaction or change balances.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-018",
+      "requirement_id": "REQ-014",
+      "category": "negative",
+      "title": "Zero transfer amount is rejected",
+      "expected": "Amount must be a positive number greater than zero, with no more than two digits after the decimal point. Blank, zero, negative, non-numeric, and over-precision values must be rejected with a clear validation message. Rejected input must not create a transaction or change balances.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-019",
+      "requirement_id": "REQ-014",
+      "category": "negative",
+      "title": "Negative transfer amount is rejected",
+      "expected": "Amount must be a positive number greater than zero, with no more than two digits after the decimal point. Blank, zero, negative, non-numeric, and over-precision values must be rejected with a clear validation message. Rejected input must not create a transaction or change balances.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-020",
+      "requirement_id": "REQ-014",
+      "category": "negative",
+      "title": "Nonnumeric transfer amount is rejected",
+      "expected": "Amount must be a positive number greater than zero, with no more than two digits after the decimal point. Blank, zero, negative, non-numeric, and over-precision values must be rejected with a clear validation message. Rejected input must not create a transaction or change balances.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-021",
+      "requirement_id": "REQ-014",
+      "category": "edge",
+      "title": "More than two decimal places is rejected",
+      "expected": "Amount must be a positive number greater than zero, with no more than two digits after the decimal point. Blank, zero, negative, non-numeric, and over-precision values must be rejected with a clear validation message. Rejected input must not create a transaction or change balances.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-022",
+      "requirement_id": "REQ-015",
+      "category": "negative",
+      "title": "Insufficient-funds transfer is rejected",
+      "expected": "The amount must not exceed the source account's available balance. If funds are insufficient, the transfer must be rejected, both balances must remain unchanged, and no completed transfer must appear in history.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-023",
+      "requirement_id": "REQ-016",
+      "category": "positive",
+      "title": "Valid transfer debits and credits exactly once",
+      "expected": "A valid transfer is atomic: the source balance decreases by the amount and the destination balance increases by the same amount. No partial transfer is allowed.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-024",
+      "requirement_id": "REQ-017",
+      "category": "positive",
+      "title": "Completed transfer appears in both account histories",
+      "expected": "A successful transfer creates one completed transfer record that can be found in both relevant account histories. The record shows the amount, date and time, source, destination, status, and memo if supplied.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-025",
+      "requirement_id": "REQ-018",
+      "category": "positive",
+      "title": "Success message appears after committed transfer",
+      "expected": "The UI reports success only after the transfer has been committed. If a transfer is rejected or fails, the UI must explain that it did not complete and must not show a success state.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-026",
+      "requirement_id": "REQ-018",
+      "category": "negative",
+      "title": "Failed transfer never displays success",
+      "expected": "The UI reports success only after the transfer has been committed. If a transfer is rejected or fails, the UI must explain that it did not complete and must not show a success state.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-027",
+      "requirement_id": "REQ-019",
+      "category": "positive",
+      "title": "Transfer persists after refresh",
+      "expected": "Refreshing after a successful transfer must preserve the updated balances and transaction record.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-028",
+      "requirement_id": "REQ-020",
+      "category": "positive",
+      "title": "Combined and account-specific histories are available",
+      "expected": "The user can view a combined transaction history and account-specific history.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-029",
+      "requirement_id": "REQ-021",
+      "category": "positive",
+      "title": "Transaction rows display required details and direction",
+      "expected": "Each row shows date and time, description or memo, transaction type, amount, status, and relevant account. Amount direction should be clear for deposits, withdrawals, and transfers.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-030",
+      "requirement_id": "REQ-022",
+      "category": "positive",
+      "title": "Transaction filters work together",
+      "expected": "The user can filter history by account, transaction type, status, and date range. When filters are applied, every displayed row must satisfy all selected filters.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-031",
+      "requirement_id": "REQ-023",
+      "category": "edge",
+      "title": "End-date filter includes transactions on the selected date",
+      "expected": "The start and end dates are inclusive. A transaction occurring on either boundary date must be included when it matches the other filters.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-032",
+      "requirement_id": "REQ-023",
+      "category": "edge",
+      "title": "Start-date filter includes transactions on the selected date",
+      "expected": "The start and end dates are inclusive. A transaction occurring on either boundary date must be included when it matches the other filters.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-033",
+      "requirement_id": "REQ-024",
+      "category": "edge",
+      "title": "No matching transactions displays an empty state",
+      "expected": "An empty result set must show a clear empty state, not an error or unrelated transactions.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-034",
+      "requirement_id": "REQ-025",
+      "category": "positive",
+      "title": "Clear filters restores all transactions",
+      "expected": "Clearing filters restores the unfiltered history.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-035",
+      "requirement_id": "REQ-026",
+      "category": "positive",
+      "title": "Profile displays synthetic customer details",
+      "expected": "A profile view displays only synthetic demo-customer details, such as display name and a masked email address.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-036",
+      "requirement_id": "REQ-027",
+      "category": "negative",
+      "title": "Profile does not expose sensitive or other-user data",
+      "expected": "The view must not reveal passwords, authentication tokens, full account identifiers, or data belonging to another user.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-037",
+      "requirement_id": "REQ-028",
+      "category": "positive",
+      "title": "Desktop viewport 1280x800 is usable",
+      "expected": "The target works in a current desktop browser at a 1280 × 800 viewport and remains usable at narrower widths.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-038",
+      "requirement_id": "REQ-028",
+      "category": "edge",
+      "title": "Narrow viewport remains usable",
+      "expected": "The target works in a current desktop browser at a 1280 × 800 viewport and remains usable at narrower widths.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-039",
+      "requirement_id": "REQ-029",
+      "category": "positive",
+      "title": "Controls show labels and feedback states",
+      "expected": "Interactive controls have readable labels and communicate loading, success, validation, and failure states.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-040",
+      "requirement_id": "REQ-030",
+      "category": "edge",
+      "title": "Pending action prevents accidental duplicate submission",
+      "expected": "A submitted action should not silently disappear. While waiting, the UI should show a loading state or otherwise prevent accidental duplicate submission.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-041",
+      "requirement_id": "REQ-031",
+      "category": "positive",
+      "title": "Navigation links open their labeled destinations",
+      "expected": "Navigation links and buttons lead to the labeled destination or perform the labeled action.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "test_id": "TC-042",
+      "requirement_id": "REQ-032",
+      "category": "negative",
+      "title": "Recoverable error allows retry or dashboard return",
+      "expected": "A recoverable error must leave the user able to retry or return to the dashboard.",
+      "status": "UNVERIFIED"
+    }
+  ],
+  "planned_requirement_ids": [
+    "REQ-001",
+    "REQ-002",
+    "REQ-003",
+    "REQ-004",
+    "REQ-005",
+    "REQ-006",
+    "REQ-007",
+    "REQ-008",
+    "REQ-009",
+    "REQ-010",
+    "REQ-011",
+    "REQ-012",
+    "REQ-013",
+    "REQ-014",
+    "REQ-015",
+    "REQ-016",
+    "REQ-017",
+    "REQ-018",
+    "REQ-019",
+    "REQ-020",
+    "REQ-021",
+    "REQ-022",
+    "REQ-023",
+    "REQ-024",
+    "REQ-025",
+    "REQ-026",
+    "REQ-027",
+    "REQ-028",
+    "REQ-029",
+    "REQ-030",
+    "REQ-031",
+    "REQ-032"
+  ],
+  "unplanned_requirement_ids": []
+}

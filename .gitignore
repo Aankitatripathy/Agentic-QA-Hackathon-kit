@@ -1,9 +1,34 @@
-.DS_Store
-
+# Credentials and environment
 .env
+.env.*
+!.env.example
 .venv/
+**/.venv/
+
+# Python
 __pycache__/
-*.py[cod]
-*.egg-info/
+*.pyc
+.pytest_cache/
 
+# Database backups
+*.dump
+*.sql
+*.sqlite
+*.sqlite3
 
+# Frontend dependencies and builds
+node_modules/
+dist/
+build/
+
+# Operating system and editor
+.DS_Store
+.vscode/
+
+# Local logs
+*.log
+
+# Local development backups and intermediate reports
+*_backup.py
+*_backup.json
+agent/tc022_result.json

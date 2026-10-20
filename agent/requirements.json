@@ -1,0 +1,218 @@
+[
+  {
+    "id": "REQ-001",
+    "section": "Users and access",
+    "requirement": "The target has one seeded demo customer.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-002",
+    "section": "Users and access",
+    "requirement": "The landing page provides a clearly labeled **Enter Demo** action. It opens the demo dashboard without requiring a password or real identity information.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-003",
+    "section": "Users and access",
+    "requirement": "The header identifies the active demo customer and provides a **Log out** action.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-004",
+    "section": "Users and access",
+    "requirement": "Logging out returns the user to the landing page. Protected dashboard views should not remain usable after logout; direct navigation to them should return the user to the landing page or an access-required state.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-005",
+    "section": "Users and access",
+    "requirement": "Refreshing while in a valid demo session should preserve that session. A logged-out user must not regain access merely by refreshing a protected page.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-006",
+    "section": "Dashboard and accounts",
+    "requirement": "The dashboard shows the customer's checking and savings accounts.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-007",
+    "section": "Dashboard and accounts",
+    "requirement": "Each account displays a readable account name, a masked account identifier, account type, and current available balance in USD.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-008",
+    "section": "Dashboard and accounts",
+    "requirement": "Balances are displayed to two decimal places. The UI must not expose a full account identifier.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-009",
+    "section": "Dashboard and accounts",
+    "requirement": "Selecting an account opens an account detail view with its current balance and related transaction history.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-010",
+    "section": "Dashboard and accounts",
+    "requirement": "Account balances shown on the dashboard and detail view must agree with the latest successful transactions.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-011",
+    "section": "Transfers between owned accounts",
+    "requirement": "The user can transfer funds between the checking and savings accounts owned by the demo customer.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-012",
+    "section": "Transfers between owned accounts",
+    "requirement": "The transfer form includes source account, destination account, amount, and an optional memo.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-013",
+    "section": "Transfers between owned accounts",
+    "requirement": "The source and destination must be different accounts. Same-account transfers must be rejected with a clear explanation and must not alter balances or create a transaction.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-014",
+    "section": "Transfers between owned accounts",
+    "requirement": "Amount must be a positive number greater than zero, with no more than two digits after the decimal point. Blank, zero, negative, non-numeric, and over-precision values must be rejected with a clear validation message. Rejected input must not create a transaction or change balances.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-015",
+    "section": "Transfers between owned accounts",
+    "requirement": "The amount must not exceed the source account's available balance. If funds are insufficient, the transfer must be rejected, both balances must remain unchanged, and no completed transfer must appear in history.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-016",
+    "section": "Transfers between owned accounts",
+    "requirement": "A valid transfer is atomic: the source balance decreases by the amount and the destination balance increases by the same amount. No partial transfer is allowed.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-017",
+    "section": "Transfers between owned accounts",
+    "requirement": "A successful transfer creates one completed transfer record that can be found in both relevant account histories. The record shows the amount, date and time, source, destination, status, and memo if supplied.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-018",
+    "section": "Transfers between owned accounts",
+    "requirement": "The UI reports success only after the transfer has been committed. If a transfer is rejected or fails, the UI must explain that it did not complete and must not show a success state.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-019",
+    "section": "Transfers between owned accounts",
+    "requirement": "Refreshing after a successful transfer must preserve the updated balances and transaction record.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-020",
+    "section": "Transaction history",
+    "requirement": "The user can view a combined transaction history and account-specific history.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-021",
+    "section": "Transaction history",
+    "requirement": "Each row shows date and time, description or memo, transaction type, amount, status, and relevant account. Amount direction should be clear for deposits, withdrawals, and transfers.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-022",
+    "section": "Transaction history",
+    "requirement": "The user can filter history by account, transaction type, status, and date range. When filters are applied, every displayed row must satisfy all selected filters.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-023",
+    "section": "Transaction history",
+    "requirement": "The start and end dates are inclusive. A transaction occurring on either boundary date must be included when it matches the other filters.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-024",
+    "section": "Transaction history",
+    "requirement": "An empty result set must show a clear empty state, not an error or unrelated transactions.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-025",
+    "section": "Transaction history",
+    "requirement": "Clearing filters restores the unfiltered history.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-026",
+    "section": "Profile",
+    "requirement": "A profile view displays only synthetic demo-customer details, such as display name and a masked email address.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-027",
+    "section": "Profile",
+    "requirement": "The view must not reveal passwords, authentication tokens, full account identifiers, or data belonging to another user.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-028",
+    "section": "General interface behavior",
+    "requirement": "The target works in a current desktop browser at a 1280 × 800 viewport and remains usable at narrower widths.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-029",
+    "section": "General interface behavior",
+    "requirement": "Interactive controls have readable labels and communicate loading, success, validation, and failure states.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-030",
+    "section": "General interface behavior",
+    "requirement": "A submitted action should not silently disappear. While waiting, the UI should show a loading state or otherwise prevent accidental duplicate submission.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-031",
+    "section": "General interface behavior",
+    "requirement": "Navigation links and buttons lead to the labeled destination or perform the labeled action.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-032",
+    "section": "General interface behavior",
+    "requirement": "A recoverable error must leave the user able to retry or return to the dashboard.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-033",
+    "section": "Out of scope",
+    "requirement": "Real bank integrations, payment rails, or deposits from external sources.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-034",
+    "section": "Out of scope",
+    "requirement": "Signup, password reset, multi-factor authentication, or production-grade identity verification.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-035",
+    "section": "Out of scope",
+    "requirement": "Multiple customers, joint accounts, loans, credit cards, budgeting, or investment features.",
+    "status": "UNVERIFIED"
+  },
+  {
+    "id": "REQ-036",
+    "section": "Out of scope",
+    "requirement": "Mobile-native applications.",
+    "status": "UNVERIFIED"
+  }
+]
