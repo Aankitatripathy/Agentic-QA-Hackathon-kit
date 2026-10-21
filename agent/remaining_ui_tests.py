@@ -72,31 +72,11 @@ def run_remaining_ui_tests(
 
         # TC-001: Verify seeded-customer count directly in PostgreSQL.
         try:
-            import subprocess
-            import getpass
+            from db_helper import query_db
 
-            psql = (
-                "/Applications/Postgres.app/Contents/"
-                "Versions/16/bin/psql"
+            customer_count = int(
+                query_db("SELECT COUNT(*) FROM customers;", timeout=15)
             )
-
-            query = subprocess.run(
-                [
-                    psql,
-                    "-h", "localhost",
-                    "-p", "5433",
-                    "-U", getpass.getuser(),
-                    "-d", "demobank",
-                    "-t", "-A",
-                    "-c", "SELECT COUNT(*) FROM customers;",
-                ],
-                capture_output=True,
-                text=True,
-                timeout=15,
-                check=True,
-            )
-
-            customer_count = int(query.stdout.strip())
             record(
                 "TC-001",
                 customer_count == 1,

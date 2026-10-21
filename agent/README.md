@@ -192,3 +192,27 @@ Do not enable QA_RUN_FINAL_TRANSFER unless using a disposable database with a ve
 
 The completed evaluation reports 42 scenarios: 38 PASS, 4 FAIL, and 0 UNVERIFIED.
 
+
+### PostgreSQL settings for QA database checks
+
+The QA scripts use db_helper.py for direct PostgreSQL verification.
+The connection can be configured using environment variables:
+
+- QA_PSQL_PATH: Optional path to the PostgreSQL psql executable.
+- QA_DB_HOST: Database host (default: localhost).
+- QA_DB_PORT: Database port (default: 5433).
+- QA_DB_USER: Database username (default: current OS username).
+- QA_DB_NAME: Database name (default: demobank).
+
+For the standard DemoBank Docker database, configure:
+
+    export QA_DB_HOST=localhost
+    export QA_DB_PORT=5432
+    export QA_DB_USER=demobank
+
+The PostgreSQL client must be installed and available on PATH, or
+QA_PSQL_PATH must point to its executable.
+
+If the database requires password authentication, configure PGPASSWORD
+or a PostgreSQL password file securely. Do not commit credentials.
+

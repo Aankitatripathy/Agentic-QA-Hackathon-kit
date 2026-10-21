@@ -3,32 +3,13 @@ import subprocess
 import getpass
 from decimal import Decimal
 from playwright.sync_api import expect
+from db_helper import query_db
 
-PSQL = "/Applications/Postgres.app/Contents/Versions/16/bin/psql"
 
 CHECKING = "00000000-0000-0000-0000-000000000101"
 SAVINGS = "00000000-0000-0000-0000-000000000102"
 
 MEMO = "QA-FINAL-TRANSFER-ONE-DOLLAR"
-
-
-def query_db(sql):
-    result = subprocess.run(
-        [
-            PSQL,
-            "-h", "localhost",
-            "-p", "5433",
-            "-U", getpass.getuser(),
-            "-d", "demobank",
-            "-t", "-A",
-            "-c", sql,
-        ],
-        capture_output=True,
-        text=True,
-        timeout=20,
-        check=True,
-    )
-    return result.stdout.strip()
 
 
 def run_successful_transfer_tests(
