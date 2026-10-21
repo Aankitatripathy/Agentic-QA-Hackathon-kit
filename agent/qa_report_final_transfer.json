@@ -5,35 +5,35 @@
       "requirement_id": "REQ-011",
       "status": "PASS",
       "details": "Transfer rows=1; status=completed",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-014_successful_transfer.png"
+      "screenshot": "evidence/TC-014_successful_transfer.png"
     },
     {
       "test_id": "TC-023",
       "requirement_id": "REQ-016",
       "status": "PASS",
       "details": "Checking 4369.75 -> 4368.75; Savings 8275.00 -> 8276.00; ledger entries=[['00000000-0000-0000-0000-000000000101', '-1.00'], ['00000000-0000-0000-0000-000000000102', '1.00']]; transaction count=13; entry count=16",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-023_successful_transfer.png"
+      "screenshot": "evidence/TC-023_successful_transfer.png"
     },
     {
       "test_id": "TC-024",
       "requirement_id": "REQ-017",
       "status": "PASS",
       "details": "Distinct accounts with transfer entries=2; memo=QA-FINAL-TRANSFER-ONE-DOLLAR; transfer ID=70833e14-e96e-4531-a8dc-3b5d3615eb1f. Verified via database ledger.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-024_successful_transfer.png"
+      "screenshot": "evidence/TC-024_successful_transfer.png"
     },
     {
       "test_id": "TC-025",
       "requirement_id": "REQ-018",
       "status": "PASS",
       "details": "Success message visible=True; committed transaction exists=True",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-025_successful_transfer.png"
+      "screenshot": "evidence/TC-025_successful_transfer.png"
     },
     {
       "test_id": "TC-027",
       "requirement_id": "REQ-019",
       "status": "PASS",
       "details": "Transfer persists=True; balances unchanged after refresh=True",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-027_successful_transfer.png"
+      "screenshot": "evidence/TC-027_successful_transfer.png"
     }
   ]
 }

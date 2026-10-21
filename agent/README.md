@@ -109,3 +109,7 @@ This excludes development assistance, local infrastructure, and other unmeasured
 4. Show the final 42-test report.
 5. Demonstrate the four confirmed defects and screenshots.
 6. Explain controlled transfer testing and database restoration.
+
+## QA Audit Report
+
+The complete test execution audit, defect findings, evidence verification, and API/token cost estimates are available in [AUDIT_REPORT.md](AUDIT_REPORT.md).

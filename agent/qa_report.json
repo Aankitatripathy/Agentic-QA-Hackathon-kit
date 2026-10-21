@@ -7,294 +7,294 @@
       "requirement_id": "REQ-001",
       "status": "PASS",
       "details": "PostgreSQL customers table contains 1 seeded customer(s).",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-001_remaining_ui.png"
+      "screenshot": "evidence/TC-001_remaining_ui.png"
     },
     {
       "test_id": "TC-002",
       "requirement_id": "REQ-002",
       "status": "PASS",
       "details": "Authenticated dashboard loaded; URL=http://localhost:5173/dashboard",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-002_dashboard_session.png"
+      "screenshot": "evidence/TC-002_dashboard_session.png"
     },
     {
       "test_id": "TC-003",
       "requirement_id": "REQ-003",
       "status": "PASS",
       "details": "Customer name and logout button displayed.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-003_dashboard_session.png"
+      "screenshot": "evidence/TC-003_dashboard_session.png"
     },
     {
       "test_id": "TC-004",
       "requirement_id": "REQ-004",
       "status": "PASS",
       "details": "Logout returned to landing page.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-004_dashboard_session.png"
+      "screenshot": "evidence/TC-004_dashboard_session.png"
     },
     {
       "test_id": "TC-005",
       "requirement_id": "REQ-004",
       "status": "PASS",
       "details": "Protected dashboard redirects after logout.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-005_dashboard_session.png"
+      "screenshot": "evidence/TC-005_dashboard_session.png"
     },
     {
       "test_id": "TC-006",
       "requirement_id": "REQ-005",
       "status": "PASS",
       "details": "Active session survived page refresh.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-006_dashboard_session.png"
+      "screenshot": "evidence/TC-006_dashboard_session.png"
     },
     {
       "test_id": "TC-007",
       "requirement_id": "REQ-005",
       "status": "PASS",
       "details": "Logged-out session remains inactive after refresh.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-007_dashboard_session.png"
+      "screenshot": "evidence/TC-007_dashboard_session.png"
     },
     {
       "test_id": "TC-008",
       "requirement_id": "REQ-006",
       "status": "PASS",
       "details": "Dashboard displays checking and savings account cards.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-008_dashboard_session.png"
+      "screenshot": "evidence/TC-008_dashboard_session.png"
     },
     {
       "test_id": "TC-009",
       "requirement_id": "REQ-007",
       "status": "PASS",
       "details": "Account names, masked identifiers, and USD are visible.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-009_dashboard_session.png"
+      "screenshot": "evidence/TC-009_dashboard_session.png"
     },
     {
       "test_id": "TC-010",
       "requirement_id": "REQ-008",
       "status": "PASS",
       "details": "Displayed balances: ['$4,369.75USD', '$8,275.00USD']",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-010_dashboard_session.png"
+      "screenshot": "evidence/TC-010_dashboard_session.png"
     },
     {
       "test_id": "TC-011",
       "requirement_id": "REQ-008",
       "status": "PASS",
       "details": "Full account UUIDs are not visible on the dashboard.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-011_dashboard_session.png"
+      "screenshot": "evidence/TC-011_dashboard_session.png"
     },
     {
       "test_id": "TC-012",
       "requirement_id": "REQ-009",
       "status": "PASS",
       "details": "Account detail displays available balance and history.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-012_dashboard_session.png"
+      "screenshot": "evidence/TC-012_dashboard_session.png"
     },
     {
       "test_id": "TC-013",
       "requirement_id": "REQ-010",
       "status": "PASS",
       "details": "Detail='$4,369.75 USD'; dashboard='$4,369.75USD'",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-013_dashboard_session.png"
+      "screenshot": "evidence/TC-013_dashboard_session.png"
     },
     {
       "test_id": "TC-014",
       "requirement_id": "REQ-011",
       "status": "PASS",
       "details": "Transfer rows=1; status=completed",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-014_successful_transfer.png"
+      "screenshot": "evidence/TC-014_successful_transfer.png"
     },
     {
       "test_id": "TC-015",
       "requirement_id": "REQ-012",
       "status": "PASS",
       "details": "Source, destination, amount, and optional memo verified.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-015_transfer_validation.png"
+      "screenshot": "evidence/TC-015_transfer_validation.png"
     },
     {
       "test_id": "TC-016",
       "requirement_id": "REQ-013",
       "status": "PASS",
       "details": "Amount='10.00'; HTTP 422; balances unchanged=True; no success message=True; response={\"error\":{\"code\":\"same_account\",\"message\":\"Source and destination accounts must be different.\"}}",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-016_transfer_validation.png"
+      "screenshot": "evidence/TC-016_transfer_validation.png"
     },
     {
       "test_id": "TC-017",
       "requirement_id": "REQ-014",
       "status": "PASS",
       "details": "Blank amount rejected with field error; balances unchanged.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-017_transfer_validation.png"
+      "screenshot": "evidence/TC-017_transfer_validation.png"
     },
     {
       "test_id": "TC-018",
       "requirement_id": "REQ-014",
       "status": "FAIL",
       "details": "Amount='0'; HTTP 201; balances unchanged=True; no success message=False; response={\"transaction\":{\"id\":\"25aa01e5-7598-4df6-a7a6-7e7ccce10f33\",\"type\":\"transfer\",\"status\":\"completed\",\"amount\":\"0.00\",\"memo\":null,\"occurred_at\":\"2026-10-20T06:21:20.466068Z\",\"source_account\":{\"id\":\"00000000-0000-0000-0000-000000000101\",\"name\":\"Everyday Checking\",\"masked_number\":\"\u2022\u2022\u2022\u2022 1042\"},\"destinatio",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-018_transfer_validation.png"
+      "screenshot": "evidence/TC-018_transfer_validation.png"
     },
     {
       "test_id": "TC-019",
       "requirement_id": "REQ-014",
       "status": "FAIL",
       "details": "Amount='-10'; HTTP 201; balances unchanged=False; no success message=False; response={\"transaction\":{\"id\":\"4cf0bfdb-1fc7-45c4-911b-86df0480b984\",\"type\":\"transfer\",\"status\":\"completed\",\"amount\":\"-10.00\",\"memo\":null,\"occurred_at\":\"2026-10-20T06:21:20.682992Z\",\"source_account\":{\"id\":\"00000000-0000-0000-0000-000000000101\",\"name\":\"Everyday Checking\",\"masked_number\":\"\u2022\u2022\u2022\u2022 1042\"},\"destinat",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-019_transfer_validation.png"
+      "screenshot": "evidence/TC-019_transfer_validation.png"
     },
     {
       "test_id": "TC-020",
       "requirement_id": "REQ-014",
       "status": "PASS",
       "details": "Amount='abc'; HTTP 422; balances unchanged=True; no success message=True; response={\"error\":{\"code\":\"invalid_amount\",\"message\":\"Amount must be a decimal string with no more than two decimal places.\"}}",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-020_transfer_validation.png"
+      "screenshot": "evidence/TC-020_transfer_validation.png"
     },
     {
       "test_id": "TC-021",
       "requirement_id": "REQ-014",
       "status": "PASS",
       "details": "Amount='10.123'; HTTP 422; balances unchanged=True; no success message=True; response={\"error\":{\"code\":\"invalid_amount\",\"message\":\"Amount must be a decimal string with no more than two decimal places.\"}}",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-021_transfer_validation.png"
+      "screenshot": "evidence/TC-021_transfer_validation.png"
     },
     {
       "test_id": "TC-022",
       "requirement_id": "REQ-015",
       "status": "FAIL",
       "details": "DB-QA-002: Insufficient-funds transfer was accepted with HTTP 201. Checking balance changed from 4369.75 to -100.00. Expected HTTP 409 and unchanged balances.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/tc022_result.json"
+      "screenshot": null
     },
     {
       "test_id": "TC-023",
       "requirement_id": "REQ-016",
       "status": "PASS",
       "details": "Checking 4369.75 -> 4368.75; Savings 8275.00 -> 8276.00; ledger entries=[['00000000-0000-0000-0000-000000000101', '-1.00'], ['00000000-0000-0000-0000-000000000102', '1.00']]; transaction count=13; entry count=16",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-023_successful_transfer.png"
+      "screenshot": "evidence/TC-023_successful_transfer.png"
     },
     {
       "test_id": "TC-024",
       "requirement_id": "REQ-017",
       "status": "PASS",
       "details": "Distinct accounts with transfer entries=2; memo=QA-FINAL-TRANSFER-ONE-DOLLAR; transfer ID=70833e14-e96e-4531-a8dc-3b5d3615eb1f. Verified via database ledger.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-024_successful_transfer.png"
+      "screenshot": "evidence/TC-024_successful_transfer.png"
     },
     {
       "test_id": "TC-025",
       "requirement_id": "REQ-018",
       "status": "PASS",
       "details": "Success message visible=True; committed transaction exists=True",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-025_successful_transfer.png"
+      "screenshot": "evidence/TC-025_successful_transfer.png"
     },
     {
       "test_id": "TC-026",
       "requirement_id": "REQ-018",
       "status": "PASS",
       "details": "Simulated HTTP 409 rejection; failure explanation visible=True; success receipt absent=True. Request intercepted; no money moved.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-026_transfer_feedback.png"
+      "screenshot": "evidence/TC-026_transfer_feedback.png"
     },
     {
       "test_id": "TC-027",
       "requirement_id": "REQ-019",
       "status": "PASS",
       "details": "Transfer persists=True; balances unchanged after refresh=True",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-027_successful_transfer.png"
+      "screenshot": "evidence/TC-027_successful_transfer.png"
     },
     {
       "test_id": "TC-028",
       "requirement_id": "REQ-020",
       "status": "PASS",
       "details": "Combined history rows=12; account-specific rows=8; URL=http://localhost:5173/transactions?account_id=00000000-0000-0000-0000-000000000101",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-028_remaining_ui.png"
+      "screenshot": "evidence/TC-028_remaining_ui.png"
     },
     {
       "test_id": "TC-029",
       "requirement_id": "REQ-021",
       "status": "PASS",
       "details": "Verified six columns, 12 seeded transactions, transaction IDs, timestamps, required details, and positive/negative amount directions.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-029_transaction_details.png"
+      "screenshot": "evidence/TC-029_transaction_details.png"
     },
     {
       "test_id": "TC-030",
       "requirement_id": "REQ-022",
       "status": "PASS",
       "details": "Combined Checking account, Deposit type, Completed status, and June 15-17, 2025 date range. Only Annual bonus appeared.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-030_combined_filters.png"
+      "screenshot": "evidence/TC-030_combined_filters.png"
     },
     {
       "test_id": "TC-031",
       "requirement_id": "REQ-023",
       "status": "FAIL",
       "details": "BUG DB-QA-001: Annual bonus (+$950.00) occurred on June 15, 2025, but was excluded when the start and end dates were both June 15, 2025. The PRD requires inclusive date boundaries in Pacific Time.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-031_end_date.png"
+      "screenshot": "evidence/TC-031_end_date.png"
     },
     {
       "test_id": "TC-032",
       "requirement_id": "REQ-023",
       "status": "PASS",
       "details": "Annual bonus was correctly included on the selected start date.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-032_start_date.png"
+      "screenshot": "evidence/TC-032_start_date.png"
     },
     {
       "test_id": "TC-033",
       "requirement_id": "REQ-024",
       "status": "PASS",
       "details": "Filtering to January 2035 displayed the expected empty-state message with no transaction rows.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-033_empty_state.png"
+      "screenshot": "evidence/TC-033_empty_state.png"
     },
     {
       "test_id": "TC-034",
       "requirement_id": "REQ-025",
       "status": "PASS",
       "details": "Original count: Showing 12 transactions. Restored count: Showing 12 transactions. Date filters cleared and full history restored.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-034_clear_filters.png"
+      "screenshot": "evidence/TC-034_clear_filters.png"
     },
     {
       "test_id": "TC-035",
       "requirement_id": "REQ-026",
       "status": "PASS",
       "details": "Profile name='Avery Demo'; masked email='a***@example.test'",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-035_remaining_ui.png"
+      "screenshot": "evidence/TC-035_remaining_ui.png"
     },
     {
       "test_id": "TC-036",
       "requirement_id": "REQ-027",
       "status": "PASS",
       "details": "Email masked=True; account UUID absent=True; no visible secret fields=True. This checks rendered profile data, not network leakage.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-036_remaining_ui.png"
+      "screenshot": "evidence/TC-036_remaining_ui.png"
     },
     {
       "test_id": "TC-037",
       "requirement_id": "REQ-028",
       "status": "PASS",
       "details": "Desktop 1280x800; horizontal overflow=False",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-037_remaining_ui.png"
+      "screenshot": "evidence/TC-037_remaining_ui.png"
     },
     {
       "test_id": "TC-038",
       "requirement_id": "REQ-028",
       "status": "PASS",
       "details": "Mobile 375x812; cards visible=True; horizontal overflow=False",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-038_remaining_ui.png"
+      "screenshot": "evidence/TC-038_remaining_ui.png"
     },
     {
       "test_id": "TC-039",
       "requirement_id": "REQ-029",
       "status": "PASS",
       "details": "All four inputs labeled=True; validation feedback visible=True",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-039_remaining_ui.png"
+      "screenshot": "evidence/TC-039_remaining_ui.png"
     },
     {
       "test_id": "TC-040",
       "requirement_id": "REQ-030",
       "status": "PASS",
       "details": "Form aria-busy=True; intercepted POST requests=1; submit button disabled while pending.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-040_transfer_feedback.png"
+      "screenshot": "evidence/TC-040_transfer_feedback.png"
     },
     {
       "test_id": "TC-041",
       "requirement_id": "REQ-031",
       "status": "PASS",
       "details": "Navigation destinations visited: ['/transactions', '/transfer', '/profile', '/dashboard']",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-041_remaining_ui.png"
+      "screenshot": "evidence/TC-041_remaining_ui.png"
     },
     {
       "test_id": "TC-042",
       "requirement_id": "REQ-032",
       "status": "PASS",
       "details": "Simulated transaction API outage displayed retry and dashboard-return controls.",
-      "screenshot": "/Users/ankitatripathy/Documents/Agentic-QA-Hackathon-kit-main/agent/evidence/TC-042_remaining_ui.png"
+      "screenshot": "evidence/TC-042_remaining_ui.png"
     }
   ],
   "summary": {
