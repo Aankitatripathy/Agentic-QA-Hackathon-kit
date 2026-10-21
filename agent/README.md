@@ -113,3 +113,82 @@ This excludes development assistance, local infrastructure, and other unmeasured
 ## QA Audit Report
 
 The complete test execution audit, defect findings, evidence verification, and API/token cost estimates are available in [AUDIT_REPORT.md](AUDIT_REPORT.md).
+
+## Installation and Reproduction Guide
+
+### Prerequisites
+
+- Python 3.11 or newer
+- Node.js 20 or newer and npm
+- Docker with Docker Compose
+- PostgreSQL 16 (provided by the database Docker setup)
+
+### 1. Start the DemoBank database
+
+From the repository root:
+
+    cd test-website/database
+    make up
+
+The original database configuration uses localhost:5432.
+The verified local QA environment used localhost:5433.
+Ensure the backend DATABASE_URL matches the port exposed by PostgreSQL.
+
+Database setup details: test-website/database/README.md.
+
+### 2. Start the backend
+
+Open a separate terminal, navigate to test-website/backend, and run:
+
+    python3 -m venv .venv
+    source .venv/bin/activate
+    python -m pip install -e .
+    cp .env.example .env
+
+Edit .env to configure DATABASE_URL and a random SESSION_SECRET.
+Then run:
+
+    set -a; source .env; set +a
+    uvicorn demobank.main:app --host 0.0.0.0 --port 8000 --reload
+
+Verify the backend at http://localhost:8000/health.
+
+### 3. Start the frontend
+
+Open another terminal, navigate to test-website/frontend, and run:
+
+    npm install
+    npm run dev
+
+Open http://localhost:5173.
+
+### 4. Install the QA agent
+
+Open another terminal, navigate to the agent directory, and run:
+
+    python3 -m venv .venv
+    source .venv/bin/activate
+    python -m pip install -r requirements.txt
+    python -m playwright install chromium
+
+### 5. Execute the QA suite
+
+With the database, backend, and frontend running:
+
+    python qa_executor.py
+
+The default runner reuses saved evidence for the controlled successful-transfer tests.
+Do not enable QA_RUN_FINAL_TRANSFER unless using a disposable database with a verified backup.
+
+### 6. Review the results
+
+- requirements.json: Extracted requirements
+- test_plan.json: Generated QA scenarios
+- qa_report.json: Main test results
+- qa_report_final_transfer.json: Saved successful-transfer results
+- DEFECTS.md: Confirmed defects
+- AUDIT_REPORT.md: Test coverage, execution results, evidence, and limitations
+- evidence/: Browser screenshots
+
+The completed evaluation reports 42 scenarios: 38 PASS, 4 FAIL, and 0 UNVERIFIED.
+
